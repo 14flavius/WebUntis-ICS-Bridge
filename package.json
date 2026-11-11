@@ -1,0 +1,77 @@
+{
+  "name": "webuntis-ics-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted WebUntis to ICS calendar sync with customizable feeds, multiple accounts and a modern dashboard.",
+  "homepage": "https://github.com/14flavius/webuntis-ics-bridge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/14flavius/webuntis-ics-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/14flavius/webuntis-ics-bridge/issues"
+  },
+  "author": {
+    "name": "Flavius Hager",
+    "url": "https://flavius-hager.de"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "node --env-file-if-exists=.env --import tsx --watch src/server/index.ts",
+    "dev:web": "vite --host 127.0.0.1",
+    "build": "tsc -p tsconfig.server.json && vite build",
+    "start": "NODE_ENV=production node --env-file-if-exists=.env dist/server/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests scripts vite.config.ts",
+    "knip": "knip",
+    "format": "prettier --write src tests scripts *.json *.ts *.mjs *.md *.yml index.html",
+    "format:check": "prettier --check src tests scripts *.json *.ts *.mjs *.md *.yml index.html",
+    "test:browser": "node --import tsx tests/browser.mts",
+    "screenshots": "npm run build && node --import tsx tests/screenshots.mts"
+  },
+  "dependencies": {
+    "@fastify/rate-limit": "11.2.1",
+    "@fastify/static": "10.1.10",
+    "better-auth": "1.7.20",
+    "better-sqlite3": "13.0.3",
+    "fastify": "5.12.8",
+    "ical-generator": "11.1.2",
+    "luxon": "3.7.2",
+    "qrcode": "1.5.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "timezones-ical-library": "3.0.0",
+    "undici": "8.12.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/luxon": "3.7.6",
+    "@types/node": "24.19.2",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "concurrently": "10.0.6",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "ical.js": "2.2.1",
+    "knip": "6.45.1",
+    "prettier": "3.9.10",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.0",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  },
+  "license": "MIT"
+}

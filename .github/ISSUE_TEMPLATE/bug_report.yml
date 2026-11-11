@@ -1,0 +1,52 @@
+name: Bug report
+description: Something does not work as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please remove passwords, feed links, school names and personal timetable data before posting.
+        Security problems belong in a [private report](https://github.com/14flavius/webuntis-ics-bridge/security/advisories/new), not here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect and what happened instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - WebUntis sync or connection test
+        - Calendar feed or ICS output
+        - Users, sign-in or two-factor authentication
+        - Installation, Docker or backups
+        - Dashboard or settings
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Shown in the footer, for example v1.0.0.
+    validations:
+      required: true
+  - type: textarea
+    id: notices
+    attributes:
+      label: Sync notes or error codes
+      description: Account card notices or connection test results, for example TIMETABLE_RANGE_RESTRICTED.
+  - type: input
+    id: calendar
+    attributes:
+      label: Calendar app
+      description: Only for feed problems, for example Apple Calendar or Google Calendar.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Output of `docker compose logs --tail=100`, with secrets and feed links removed.
+      render: text

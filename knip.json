@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/knip/schema.json",
+  "entry": ["tests/*.test.ts", "scripts/*.mjs"],
+  "project": ["src/**/*.{ts,tsx}", "tests/**/*.{ts,mts}", "scripts/*.mjs"],
+  "ignoreDependencies": ["tailwindcss"]
+}

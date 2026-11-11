@@ -1,0 +1,35 @@
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+/build
+/coverage
+*.tsbuildinfo
+
+# Environment & secrets - never commit real credentials
+.env*
+!.env.example
+*.pem
+
+# Self-hosted instance state (database, backups, working cache)
+/data/
+/backups/
+/.cache/
+*.sqlite*
+*.db*
+
+# Editor / OS
+/.idea/
+/.vscode/
+.DS_Store
+
+# Logs
+npm-debug.log*
+*-debug.log*
+
+# Internal working notes - kept locally, excluded from the public repo.
+# Remove these two lines if you want to publish them (sanitize paths/school
+# names first).
+/AGENTS.md
+/PROJECT_PLAN.md

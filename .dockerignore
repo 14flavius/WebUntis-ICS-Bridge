@@ -1,0 +1,11 @@
+.git
+.idea
+node_modules
+.cache
+data
+backups
+dist
+.env*
+*.sqlite*
+*.db*
+tests

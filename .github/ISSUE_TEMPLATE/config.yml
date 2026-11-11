@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem
+    url: https://github.com/14flavius/webuntis-ics-bridge/security/advisories/new
+    about: Please report vulnerabilities privately.
+  - name: Installation and configuration
+    url: https://github.com/14flavius/webuntis-ics-bridge#installation
+    about: Installer, reverse proxy, updates and backups are covered in the README.

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">WebUntis ICS Bridge</title>
+  <desc id="description">A self-hosted WebUntis to ICS calendar sync. Your timetable in any calendar app, all on your server.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1120" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1F19"/>
+      <stop offset="1" stop-color="#14543F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(934 145) rotate(90) scale(245 340)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3FCB8A" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#3FCB8A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paper" x1="884" y1="58" x2="1006" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CFF3DF"/>
+    </linearGradient>
+    <linearGradient id="base" x1="795" y1="235" x2="1027" y2="257" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B4E8CC"/>
+      <stop offset=".5" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D3F3E1"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#A8F0C8" stroke-opacity=".045"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1120" height="300" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1120" height="300" fill="url(#background)"/>
+    <rect width="1120" height="300" fill="url(#grid)"/>
+    <rect width="1120" height="300" fill="url(#glow)"/>
+    <circle cx="942" cy="150" r="197" stroke="#A5F0C6" stroke-opacity=".1"/>
+    <circle cx="942" cy="150" r="149" stroke="#A5F0C6" stroke-opacity=".08"/>
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <text x="60" y="62" fill="#9FDDBB" font-size="13" font-weight="600" letter-spacing="2.5">SELF-HOSTED CALENDAR SYNC</text>
+      <text x="57" y="150" fill="#FFFFFF" font-size="66" font-weight="750" letter-spacing="-2.4">WebUntis ICS Bridge</text>
+      <text x="60" y="198" fill="#C3E6D3" font-size="22">Your timetable in any calendar app. All on your server.</text>
+      <g fill="#8FCFAE" font-size="13" font-weight="500">
+        <text x="60" y="257">Docker</text>
+        <circle cx="126" cy="252" r="2" fill="#4F9A77"/>
+        <text x="145" y="257">SQLite</text>
+        <circle cx="210" cy="252" r="2" fill="#4F9A77"/>
+        <text x="229" y="257">English + German</text>
+      </g>
+    </g>
+    <rect x="800" y="130" width="88" height="105" rx="17" fill="#3FA877"/>
+    <rect x="837" y="94" width="107" height="141" rx="20" fill="#8FDDB5"/>
+    <rect x="880" y="58" width="130" height="177" rx="24" fill="url(#paper)"/>
+    <path d="M880 82C880 68.745 890.745 58 904 58H986C999.255 58 1010 68.745 1010 82V104H880V82Z" fill="#1F7A56"/>
+    <path d="M915 46V70M975 46V70" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+    <g fill="#9AD9B8">
+      <rect x="900" y="124" width="24" height="24" rx="7"/>
+      <rect x="933" y="124" width="24" height="24" rx="7"/>
+      <rect x="966" y="124" width="24" height="24" rx="7"/>
+      <rect x="900" y="157" width="24" height="24" rx="7"/>
+      <rect x="966" y="157" width="24" height="24" rx="7"/>
+      <rect x="900" y="190" width="24" height="24" rx="7"/>
+      <rect x="933" y="190" width="24" height="24" rx="7"/>
+    </g>
+    <rect x="933" y="157" width="24" height="24" rx="7" fill="#17694A"/>
+    <path d="M793 235H1027C1027 248.255 1016.255 259 1003 259H817C803.745 259 793 248.255 793 235Z" fill="url(#base)"/>
+    <rect x=".5" y=".5" width="1119" height="299" rx="19.5" stroke="#8EEFBF" stroke-opacity=".14"/>
+  </g>
+</svg>
