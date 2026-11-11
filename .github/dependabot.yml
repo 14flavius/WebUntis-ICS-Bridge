@@ -5,8 +5,15 @@ updates:
     schedule:
       interval: weekly
     groups:
+      # Major versions arrive as separate pull requests so one breaking
+      # update cannot block the routine minor and patch updates.
       dependencies:
         patterns: ['*']
+        update-types: [minor, patch]
+    ignore:
+      # The Node.js types follow the supported runtime (engines: Node 24).
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
     open-pull-requests-limit: 5
   - package-ecosystem: github-actions
     directory: /
@@ -16,3 +23,7 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    ignore:
+      # The image stays on the Node 24 LTS line required by package.json.
+      - dependency-name: node
+        update-types: ['version-update:semver-major']
