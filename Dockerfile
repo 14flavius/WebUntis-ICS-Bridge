@@ -1,5 +1,5 @@
 # Node's official multi-architecture image supports linux/amd64 and linux/arm64.
-FROM node:24-bookworm-slim AS dependencies
+FROM node:25-bookworm-slim AS dependencies
 WORKDIR /app
 COPY package.json package-lock.json .npmrc ./
 RUN npm ci --ignore-scripts --cache /app/.cache/npm
@@ -10,12 +10,12 @@ COPY src ./src
 COPY public ./public
 RUN npm run build
 
-FROM node:24-bookworm-slim AS production-dependencies
+FROM node:25-bookworm-slim AS production-dependencies
 WORKDIR /app
 COPY package.json package-lock.json .npmrc ./
 RUN npm ci --omit=dev --ignore-scripts --cache /app/.cache/npm
 
-FROM node:24-bookworm-slim AS runtime
+FROM node:25-bookworm-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production HOST=0.0.0.0 PORT=3000 DATABASE_PATH=/app/data/bridge.sqlite
 COPY --from=production-dependencies /app/node_modules ./node_modules
