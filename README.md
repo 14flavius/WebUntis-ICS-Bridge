@@ -204,7 +204,7 @@ docker compose up -d --pull never --wait
 | `PUBLIC_URL`   | Full browser URL, such as `https://calendar.example.com`. Subpaths are not supported.           |
 | `HOST_PORT`    | Published HTTP port on the host, usually `3000`.                                                |
 | `BIND_ADDRESS` | `127.0.0.1` for local access or a proxy on the same host; `0.0.0.0` for LAN access.             |
-| `BRIDGE_IMAGE` | Optional fixed image, e.g. `ghcr.io/14flavius/webuntis-ics-bridge:1.0.0`. Defaults to `latest`. |
+| `BRIDGE_IMAGE` | Optional fixed image, e.g. `ghcr.io/14flavius/webuntis-ics-bridge:1.0.1`. Defaults to `latest`. |
 
 Keep the generated `BETTER_AUTH_SECRET`, `ENCRYPTION_KEY` and `COMPOSE_PROJECT_NAME`
 unchanged. For HTTPS, terminate TLS at your reverse proxy and forward to the

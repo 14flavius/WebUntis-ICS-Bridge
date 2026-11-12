@@ -1,6 +1,6 @@
 {
   "name": "webuntis-ics-bridge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Self-hosted WebUntis to ICS calendar sync with customizable feeds, multiple accounts and a modern dashboard.",

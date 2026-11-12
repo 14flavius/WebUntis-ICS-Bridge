@@ -172,7 +172,7 @@ printf '%s\n' \
   "COMPOSE_PROJECT_NAME=$instance_name" \
   '' \
   '# Optional: pin a release instead of using latest.' \
-  '# BRIDGE_IMAGE=ghcr.io/14flavius/webuntis-ics-bridge:1.0.0' \
+  '# BRIDGE_IMAGE=ghcr.io/14flavius/webuntis-ics-bridge:1.0.1' \
   '' \
   '# Apply changes: docker compose up -d --pull never --wait' \
   > "$temporary/.env"
